@@ -6,6 +6,7 @@ import RAF from '../utils/RAF'
 import config from '../utils/config'
 import MyGUI from '../utils/MyGUI'
 
+import SpherePillards from './SpherePillardsClass'
 import simpleFrag from '../shaders/simple.frag'
 import simpleVert from '../shaders/simple.vert'
 
@@ -43,7 +44,7 @@ class MainThreeScene {
         })
         const cube = new THREE.Mesh(new THREE.BoxGeometry(), shaderMat)
         this.scene.add(cube)
-
+SpherePillards.init(this.scene)
         MyGUI.hide()
         if (config.myGui)
             MyGUI.show()
